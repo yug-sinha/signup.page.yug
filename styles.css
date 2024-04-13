@@ -1,0 +1,232 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.image-container {
+  width: 35%;
+  height: 100%;
+}
+
+.login-container {
+  width: 65%;
+  display: flex;
+  flex-direction: column; /* Ensure items stack vertically */
+  align-items: flex-end; /* Align items to the right */
+  padding-right: 20px; /* Add some padding to the right to create space */
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  width: 300px; /* Set width for the form container */
+  margin-left: auto; /* Push the container to the right */
+  margin-right: auto; /* Push the container to the left */
+}
+
+.tab {
+  margin-top: 10px;
+  font-weight: bold;
+  width: 100%; /* Set width for tabs */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: calc(100% - 10px); /* Set input fields to take full width with some margin */
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc; /* Add border to input fields */
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.container-checkbox input[type="checkbox"] {
+  display: none; /* Hide the default checkbox */
+}
+
+.container-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px; /* Adjust the size of the checkbox */
+  width: 15px; /* Adjust the size of the checkbox */
+  background-color: #fff;
+  border: 1px solid #ccc; /* Add border to the checkbox */
+  border-radius: 3px;
+  margin-right: 10px; /* Add space between checkbox and text */
+}
+
+.container-checkbox .container-label {
+  margin-left: 25px; /* Adjust according to checkbox size */
+}
+
+.container-checkbox input:checked ~ .checkmark:after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 4px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.container-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.container-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+  border-radius: 3px;
+}
+
+.container-checkbox input:checked ~ .checkmark:after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.circular-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ccc; /* Default background color */
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+}
+
+.add-picture-button {
+  display: block;
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.add-picture-button:hover {
+  background-color: #45a049;
+}
+
+.location-tab input[type="text"] {
+  width: calc(100% - 40px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%; /* Set button width to take full width */
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.containerPurpose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.choose-purpose-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  width: 900px; /* Set width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.purpose-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.purpose-option {
+  display: inline-block; /* Display purpose options in horizontal line */
+  margin-right: 20px; /* Add spacing between options */
+  cursor: pointer; /* Change cursor to pointer for better usability */
+}
+
+.purpose-icon,
+.circular-image-small {
+  width: 250px; /* Adjust the width of the icons */
+  height: 250px; /* Adjust the height of the icons */
+  border-radius: 50%;
+  background-color: #ccc; /* Default background color */
+  background-size: cover;
+  background-position: center;
+  margin-right: 10px; /* Add margin between images */
+}
+
+.purpose-option input[type="radio"] {
+  display: none; /* Hide the radio button */
+}
+
+.purpose-option {
+  display: inline-block; /* Display purpose options in horizontal line */
+  margin-right: 20px; /* Add spacing between options */
+  cursor: pointer; /* Change cursor to pointer for better usability */
+}
+
+.purpose-option input[type="radio"]:checked + .purpose-icon {
+  border: 20px solid #4CAF50; /* Highlight the selected image */
+}
